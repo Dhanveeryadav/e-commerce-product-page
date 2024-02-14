@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | E-commerce product page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+
+    <header class="header flex-container-horizontal">
+      <div>
+        <img src="images/logo.svg" alt="brand-logo" class="header__logo" />
+      </div>
+      <button
+        class="header__hamburger"
+        aria-expanded="false"
+        aria-controls="nav__list"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+      <nav class="nav flex-container-horizontal">
+        <ul
+          data-visibility="false"
+          id="nav__list"
+          class="nav__list flex-container-horizontal"
+        >
+          <li class="nav__list-item">
+            <a class="nav__list-items-link" href="#">Collections</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__list-items-link" href="#">Men</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__list-items-link" href="#">Women</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__list-items-link" href="#">About</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="nav__list-items-link" href="#">Contact</a>
+          </li>
+        </ul>
+        <div class="nav__img">
+          <img
+            class="nav__img-cart-icon"
+            src="images/icon-cart.svg"
+            alt="shopping cart icon"
+          />
+          <img
+            class="nav__img-profile-icon"
+            src="images/image-avatar.png"
+            alt="user profile icon"
+          />
+        </div>
+      </nav>
+    </header>
+    <hr>
+    
+    <div class="cart-chip hidden">
+      <span class="cart-chip__txt">3</span>
+    </div>
+
+    <section class="hero grid__container">
+      <div class="hero__container">
+        <img class="hero__image" src="images/image-product-1.jpg" alt="" />
+
+        <div>
+          <img
+            class="hero__previous-btn arrow-right"
+            src="images/icon-previous.svg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+            class="hero__next-btn arrow-left"
+            src="images/icon-next.svg"
+            alt=""
+          />
+        </div>
+
+        <div class="hero__thumbnail-container">
+          <div class="hero__thumbnail-img-wrapper">
+            <div class="thumbnail-image-wrapper">
+              <img
+                class="hero__thumbnail hero__thumbnail-active"
+                src="images/image-product-1-thumbnail.jpg"
+                alt=""
+              />
+            </div>
+            <div class="thumbnail-image-wrapper">
+              <img
+                class="hero__thumbnail"
+                src="images/image-product-2-thumbnail.jpg"
+                alt=""
+              />
+            </div>
+            <div class="thumbnail-image-wrapper">
+              <img
+                class="hero__thumbnail"
+                src="images/image-product-3-thumbnail.jpg"
+                alt=""
+              />
+            </div>
+            <div class="thumbnail-image-wrapper">
+              <img
+                class="hero__thumbnail"
+                src="images/image-product-4-thumbnail.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product container">
+        <div>
+          <small class="product__name">Sneaker Company</small>
+          <h1 class="product__title">Fall Limited Edition Sneakers</h1>
+          <p class="product__description">
+            These low-profile sneakers are your perfect casual wear companion.
+            Featuring a durable rubber outer sole, they’ll withstand everything
+            the weather can offer.
+          </p>
+        </div>
+        <div class="product__price-container-outer">
+          <strong class="product__price price">$125.00</strong>
+          <span class="product__discount price">50%</span>
+          <p class="product__actual-price price">$250.00</p>
+        </div>
+        <div class="product__price-and-btns">
+          <div class="product__price-container product__price-container--btns">
+            <button class="product__price-dec">
+              <img class="icon icon--minus" src="images/icon-minus.svg" />
+            </button>
+            <p class="product__price-total">0</p>
+            <button class="product__price-inc">
+              <img class="icon icon--plus" src="images/icon-plus.svg" />
+            </button>
+          </div>
+          <div class="product__btn-cart">
+            <img  src="images/icon-cart-white.svg" />
+          </div>
+          <div class="product__btn-container">
+            <button class="product__btn-txt btn btn-txt">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- repating section -->
+    <section class="modal hidden">
+      <div class="close-btn">
+        <img src="images/icon-close.svg" alt="close button">
+      </div>
+      <div>
+        <img class="hero__image-window" src="images/image-product-1.jpg" alt="" />
+        <div>
+          <img
+           class="hero__previous-btn-window"
+            src="images/icon-previous.svg"
+            alt=""
+          />
+        </div>
+        <div>
+          <img
+          class="hero__next-btn-window"
+            src="images/icon-next.svg"
+            alt=""
+          />
+        </div>
+      <div class="hero__thumbnail-img-wrapper hero__thumbnail-img-wrapper--window">
+        <div class="thumbnail-image-wrapper">
+          <img
+            class="hero__thumbnail-window hero__thumbnail-active"
+            src="images/image-product-1-thumbnail.jpg"
+            alt=""
+          />
+        </div>
+        <div class="thumbnail-image-wrapper">
+          <img
+            class="hero__thumbnail-window"
+            src="images/image-product-2-thumbnail.jpg"
+            alt=""
+          />
+        </div>
+        <div class="thumbnail-image-wrapper">
+          <img
+            class="hero__thumbnail-window"
+            src="images/image-product-3-thumbnail.jpg"
+            alt=""
+          />
+        </div>
+        <div class="thumbnail-image-wrapper">
+          <img
+            class="hero__thumbnail-window"
+            src="images/image-product-4-thumbnail.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <div class="overlay hidden"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
